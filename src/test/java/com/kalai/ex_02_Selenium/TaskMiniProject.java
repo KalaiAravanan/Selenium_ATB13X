@@ -10,6 +10,7 @@ public class TaskMiniProject {
 
     @Test
     public void validateminiproject() {
+
        FirefoxDriver driver = new FirefoxDriver();
        driver.get("https://app.vwo.com/");
 
@@ -18,6 +19,8 @@ public class TaskMiniProject {
         driver.getPageSource();
 
         driver.findElement(By.linkText("Start a free trial")).click();
+        //driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys("abc");
+
         driver.findElement(By.id("page-v1-step1-email")).sendKeys("abc");
 
         driver.findElement(By.name("gdpr_consent_checkbox")).click();
@@ -26,6 +29,6 @@ public class TaskMiniProject {
         WebElement error_msg = driver.findElement(By.className("invalid-reason"));
         Assert.assertEquals(error_msg.getText(), "The email address you entered is incorrect.");
 
-        driver.close();
+        driver.quit();
     }
 }
