@@ -21,7 +21,9 @@ public class TestSelenium_26_Radio_Checkbox {
 
         driver.findElement(By.xpath("//input[@id=\"sex-1\"]")).click();
 
-        driver.findElement(By.xpath("//input[@id=\"profession-1\"]")).click();
+        driver.findElement(By.xpath("//input[@id=\"profession-1\"]")).click(); //profession
+
+        driver.findElement(By.xpath("//input[@id=\"exp-1\"]")).click(); //yrs of experience
 
         //driver.quit();
     }
